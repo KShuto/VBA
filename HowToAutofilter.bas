@@ -5,18 +5,15 @@ Sub HowToAutoFiler()
     Dim TgtCell As Range
     
     Set TgtSheet = Worksheets("01")
-    Set TgtCell = TgtSheet.Range("A6:D6")
-    
-    
-    
+    Set TgtCell = TgtSheet.Range("A10:D10")
     
     ' オートフィルタをかける
     With TgtCell
         .AutoFilter _
-            Field:=3, _
-            Criteria1:=Range("B3"), _
+            Field:=Range("B4"), _
+            Criteria1:=Range("B5"), _
             Operator:=xlOr, _
-            Criteria2:=Range("B4")
+            Criteria2:=Range("B7")
 '        .AutoFilter _
 '            Field:=4, _
 '            Operator:=xlTop10Items
